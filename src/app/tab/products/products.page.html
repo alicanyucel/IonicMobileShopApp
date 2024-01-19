@@ -5,9 +5,22 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">products</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card>
+    <ion-img
+      src="../../../assets/images/peynir.jpg"   style="width:200px;height:200px;"></ion-img>
+    <ion-card-header>
+      <ion-card-subtitle>
+        26.51 tl
+      </ion-card-subtitle>
+      <ion-card-title>
+        Peynir
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label position="floating">
+        Adet
+      </ion-label>
+      <ion-input value="1" min="1" required type="number"></ion-input>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
