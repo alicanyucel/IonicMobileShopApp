@@ -1,0 +1,53 @@
+Alış Veriş Sitesi için Api'ler
+
+Basket GetList
+Type: Get
+https://ioniceducationwebapi.ecnorow.com/api/baskets/getlist
+Parameters: ''
+
+---------------------------------------------------------------
+
+Basket Add
+Type: Post
+https://ioniceducationwebapi.ecnorow.com/api/baskets/add
+Object: 
+{
+  "id": number,
+  "quantity": number,
+  "productId": number
+}
+
+---------------------------------------------------------------
+
+Basket Update
+Type: Post
+https://ioniceducationwebapi.ecnorow.com/api/baskets/update
+Object: 
+{
+  "id": number,
+  "quantity": number,
+  "productId": number
+}
+
+---------------------------------------------------------------
+
+Basket Delete
+Type: Post
+https://ioniceducationwebapi.ecnorow.com/api/baskets/delete
+Object: 
+{
+  "id": number,
+  "quantity": number,
+  "productId": number
+}
+
+---------------------------------------------------------------
+
+Basket GetById
+Type: Get
+https://ioniceducationwebapi.ecnorow.com/api/baskets/getById
+Parameters: guid: string
+Example: https://ioniceducationwebapi.ecnorow.com/api/baskets/getById?id=5
+
+---------------------------------------------------------------
+

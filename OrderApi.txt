@@ -1,0 +1,66 @@
+Alış Veriş Sitesi için Api'ler
+
+Order GetList
+Type: Get
+https://ioniceducationwebapi.ecnorow.com/api/Orders/getList
+Parameters: ''
+
+Model Yapısı
+{
+  {
+      "payment": {
+        "id": number,
+        "date": string,
+        "cartNumber": string,
+        "cartOwner": string,
+        "expirationDate": string,
+        "cvv": string
+      },
+      "orders": [
+        {
+          "id": number,
+          "productId": number,
+          "paymentId": number,
+          "productName": string,
+          "quantity": number,
+          "price": number
+        }
+      ],
+      "total": number
+    } 
+}
+---------------------------------------------------------------
+
+Order Add
+Type: Post
+https://ioniceducationwebapi.ecnorow.com/api/Orders/addPayment
+Object: 
+{
+  "payment": {
+    "id": 0,
+    "date": "2022-05-13T15:33:30.230Z",
+    "cartNumber": "string",
+    "cartOwner": "string",
+    "expirationDate": "string",
+    "cvv": "string"
+  },
+  "baskets": [
+    {
+      "id": 0,
+      "quantity": 0,
+      "productId": 0,
+      "product": {
+        "id": 0,
+        "name": "string",
+        "inventoryQuantity": 0,
+        "price": 0,
+        "imageUrl": "string",
+        "codeGuid": "string"
+      }
+    }
+  ]
+}
+
+
+
+
