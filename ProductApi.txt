@@ -1,0 +1,62 @@
+Alış Veriş Sitesi için Api'ler
+
+Product GetList
+Type: Get
+https://ioniceducationwebapi.ecnorow.com/api/products/getlist
+Parameters: ''
+
+---------------------------------------------------------------
+
+Product Add
+Type: Post
+https://ioniceducationwebapi.ecnorow.com/api/products/add
+Object: 
+{
+  "id": 0,
+  "name": "string",
+  "inventoryQuantity": 0,
+  "price": 0,
+  "imageUrl": "string",
+  "codeGuid": "string"  
+}
+
+---------------------------------------------------------------
+
+Product Update
+Type: Post
+https://ioniceducationwebapi.ecnorow.com/api/products/update
+Object: 
+{
+  "id": 0,
+  "name": "string",
+  "inventoryQuantity": 0,
+  "price": 0,
+  "imageUrl": "string",
+  "codeGuid": "string"
+}
+
+---------------------------------------------------------------
+
+Product Delete
+Type: Post
+https://ioniceducationwebapi.ecnorow.com/api/products/delete
+Object: 
+{
+  "id": 0,
+  "name": "string",
+  "inventoryQuantity": 0,
+  "price": 0,
+  "imageUrl": "string",
+  "codeGuid": "string"
+}
+
+---------------------------------------------------------------
+
+Product GetById
+Type: Get
+https://ioniceducationwebapi.ecnorow.com/api/products/getById
+Parameters: guid: string
+Example: https://ioniceducationwebapi.ecnorow.com/api/products/getById?guid=asdas-dasd-adasdas
+
+---------------------------------------------------------------
+U
