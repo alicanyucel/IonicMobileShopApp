@@ -1,14 +1,14 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>products</ion-title>
+    <ion-title>Ürünler</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-card>
-    <ion-img
+  <ion-card center>
+    <ion-img class="ion-no-padding"
       src="../../../assets/images/peynir.jpg"   style="width:200px;height:200px;"></ion-img>
-    <ion-card-header>
+    <ion-card-header class="ion-text-center">
       <ion-card-subtitle>
         26.51 tl
       </ion-card-subtitle>
@@ -17,10 +17,23 @@
       </ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <ion-label position="floating">
-        Adet
-      </ion-label>
-      <ion-input value="1" min="1" required type="number"></ion-input>
+      <ion-item class="ion-text-center">
+      <ion-button size="medium">
+        <ion-icon name="duplicate-outline"></ion-icon>
+      </ion-button>
+      <ion-label>1</ion-label>
+      <ion-button size="medium">
+        <ion-icon name="remove-outline"></ion-icon>
+      </ion-button>
+      </ion-item >
+      <ion-button expand="block" color="success">
+        <ion-icon name="bag-add-outline"></ion-icon>
+        Sepete Ekle</ion-button>
+        <ion-item class="ion-text-center">
+        <ion-label>
+          <p>Kalan Adet:10</p>
+        </ion-label>
+        </ion-item>
     </ion-card-content>
   </ion-card>
 </ion-content>
