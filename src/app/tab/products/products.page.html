@@ -5,15 +5,15 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-card center>
+  <ion-card *ngFor="let product of products">
     <ion-img class="ion-no-padding"
-      src="../../../assets/images/peynir.jpg"   style="width:200px;height:200px;"></ion-img>
+      src="{{product.imageUrl}}"   style="width:200px;height:200px;"></ion-img>
     <ion-card-header class="ion-text-center">
       <ion-card-subtitle>
-        26.51 tl
+    {{product.price | currency:'TRY':'symbol-narrow':'1.2-2'}}
       </ion-card-subtitle>
       <ion-card-title>
-        Peynir
+      {{product.name}}
       </ion-card-title>
     </ion-card-header>
     <ion-card-content>
@@ -31,7 +31,7 @@
         Sepete Ekle</ion-button>
         <ion-item class="ion-text-center">
         <ion-label>
-          <p>Kalan Adet:10</p>
+          <p>Kalan Adet:{{product.inventoryQuantity}}</p>
         </ion-label>
         </ion-item>
     </ion-card-content>
