@@ -17,9 +17,9 @@ quantity:number=1;
   ) { }
 
   ngOnInit() {
-    this.getlİst();
+    this.getlist();
   }
-getlİst(){
+getlist(){
   this.productService.getList().subscribe((res:any)=>{
  this.products=res.data;
   },(err)=>{
