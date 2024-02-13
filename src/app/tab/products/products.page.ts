@@ -30,6 +30,16 @@ addQuantity(){
   this.quantity++;
 }
 outQuantity(){
+if(this.quantity==0)
+{
+this.quantity=0;
+}
+else if(this.quantity<0)
+{
+  this.quantity=0;
+}
+else{
   this.quantity--;
+}
 }
 }
