@@ -5,6 +5,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <ion-searchbar></ion-searchbar>
   <ion-card *ngFor="let product of products">
     <ion-img class="ion-no-padding"
       src="{{product.imageUrl}}"   style="width:200px;height:200px;"></ion-img>
@@ -18,11 +19,11 @@
     </ion-card-header>
     <ion-card-content>
       <ion-item class="ion-text-center">
-      <ion-button size="medium">
+      <ion-button size="medium" (click)="addQuantity()">
         <ion-icon name="duplicate-outline"></ion-icon>
       </ion-button>
-      <ion-label>1</ion-label>
-      <ion-button size="medium">
+      <ion-label [innerText]="quantity"></ion-label>
+      <ion-button size="medium" (click)="outQuantity()">
         <ion-icon name="remove-outline"></ion-icon>
       </ion-button>
       </ion-item >

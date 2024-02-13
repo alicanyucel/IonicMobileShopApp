@@ -10,6 +10,7 @@ import { ErrorService } from '../error.service';
 })
 export class ProductsPage implements OnInit {
 products:ProductModel[]=[]
+quantity:number=1;
   constructor(
     private productService:ProductService,
     private errorService:ErrorService
@@ -24,5 +25,11 @@ getlİst(){
   },(err)=>{
    this.errorService.errorHandler(err);
   });
+}
+addQuantity(){
+  this.quantity++;
+}
+outQuantity(){
+  this.quantity--;
 }
 }
