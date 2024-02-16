@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from './service/product.service';
 import { ProductModel } from './model/productmodel';
 import { ErrorService } from '../error.service';
+import { ToastButton, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-products',
@@ -13,7 +14,8 @@ products:ProductModel[]=[]
 quantity:number=1;
   constructor(
     private productService:ProductService,
-    private errorService:ErrorService
+    private errorService:ErrorService,
+    private toastController:ToastController
   ) { }
 
   ngOnInit() {
@@ -26,20 +28,28 @@ getlist(){
    this.errorService.errorHandler(err);
   });
 }
-addQuantity(){
-  this.quantity++;
+addQuantity(product:ProductModel){
+const quantity=document.getElementById('name-' + product.id).innerHTML;
+ if(+quantity+1>product.inventoryQuantity)
+ {
+this.presentToast('Adet Stok Adedinden Fazla Olamaz');
+return;
+ }
+ document.getElementById('name-'+product.id).innerHTML=(+quantity+1).toString();
 }
-outQuantity(){
-if(this.quantity==0)
-{
-this.quantity=0;
+outQuantity(product:ProductModel){
+const quantity=document.getElementById('name-' + product.id).innerHTML;
+if(+quantity-1<1){
+this.presentToast('adet 1 den küçük olamaz');
+return;
 }
-else if(this.quantity<0)
-{
-  this.quantity=0;
+document.getElementById('name-'+product.id).innerHTML=(+quantity-1).toString();
 }
-else{
-  this.quantity--;
-}
+async presentToast(_message:string){
+  const toast=await this.toastController.create({
+    message:_message,
+    duration:2000
+  });
+  toast.present();
 }
 }
